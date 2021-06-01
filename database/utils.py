@@ -21,7 +21,7 @@ class DataBaseAPI:
 
     def get_visitor_record(self, username):
         records = self.records.filter(visitor_name=username)
-        records = self.clean_record(records)
+        records = self.clean_record(list(records))
         return records
 
     def clean_record(self, records):
